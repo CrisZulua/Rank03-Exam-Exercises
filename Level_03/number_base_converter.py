@@ -7,7 +7,7 @@
 #   By: czuluaga <czuluaga@student.42malaga.com>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/07/14 10:04:31 by czuluaga            #+#    #+#            #
-#   Updated: 2026/07/15 12:02:37 by czuluaga           ###   ########.fr      #
+#   Updated: 2026/07/15 12:29:55 by czuluaga           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -31,22 +31,38 @@
 #   Output: "ERROR"
 
 
-def convert_to_int(number: str, from_base: int) -> str:
-    num: str = ""
-    return num
+def convert_to_int(number: str, from_base: int) -> int:
+    if not (2 <= from_base <= 36):
+        raise ValueError("Invalid base")
+    if not number:
+        raise ValueError("Empty number")
+
+    return int(number, from_base)
 
 
-def convert_to_base(number: str, to_base: int) -> str:
-    num = int(number, base=to_base)
-    return str(num)
+def convert_to_base(number: int, to_base: int) -> str:
+    if not (2 <= to_base <= 36):
+        raise ValueError("Invalid base")
+
+    digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    new_number = ""
+
+    while number > 0:
+        new_number += digits[number % to_base]
+        number = number // to_base
+
+    return new_number[::-1]
 
 
 def number_base_converter(number: str, from_base: int, to_base: int) -> str:
-    if from_base < 2 or to_base < 2:
+    if not (2 <= from_base <= 36 and 2 <= to_base <= 36):
         return "ERROR"
-    num: str = convert_to_int(number, from_base)
-    res: str = convert_to_base(num, to_base)
-    return res
+
+    try:
+        decimal_value = convert_to_int(number, from_base)
+        return convert_to_base(decimal_value, to_base)
+    except ValueError:
+        return "ERROR"
 
 
 if __name__ == "__main__":
