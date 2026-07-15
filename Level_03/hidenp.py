@@ -7,24 +7,26 @@
 #   By: czuluaga <czuluaga@student.42malaga.com>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/06/30 10:11:33 by czuluaga            #+#    #+#            #
-#   Updated: 2026/06/30 10:40:38 by czuluaga           ###   ########.fr      #
+#   Updated: 2026/07/15 12:02:35 by czuluaga           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
-# Write a function that checks if the string 'small' is a subsequence
-# of 'big'. A subsequence means all characters of 'small' appear in 'big'
-# in the same order, but not necessarily consecutively.
-# Function is case-sensitive.
-
-# Input
-# hidenp("sing","subsequence testing")
-# Output
-# True
-
-# Input
-# hidenp("abc", "ab")
-# Output
-# False
+# Assignment
+# ----------
+# Write a function that checks whether the string "small" is a subsequence
+# of "big". All characters of "small" must appear in "big" in the same
+# order, although not necessarily consecutively.
+# The comparison is case-sensitive.
+#
+# Signature:
+#   def hidenp(small: str, big: str) -> bool
+#
+# Examples:
+#   Input:  hidenp("sing", "subsequence testing")
+#   Output: True
+#
+#   Input:  hidenp("abc", "ab")
+#   Output: False
 
 
 def hidenp(small: str, big: str) -> bool:

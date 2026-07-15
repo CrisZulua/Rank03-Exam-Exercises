@@ -7,46 +7,30 @@
 #   By: czuluaga <czuluaga@student.42malaga.com>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/07/14 12:39:43 by czuluaga            #+#    #+#            #
-#   Updated: 2026/07/14 12:52:06 by czuluaga           ###   ########.fr      #
+#   Updated: 2026/07/15 12:02:37 by czuluaga           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
 # Assignment
-#   Write a function that counts the number of valid consecutive digit pairs
-#   in a string. A valid pair consists of two adjacent digits where the second
-#   digit is exactly one greater than the first.
-#   A 9 followed by a 0 is NOT a valid pair.
-# Function signature
-#   def pattern_tracker(text: str) -> int:
-# Examples
-# Input
-#   pattern_tracker("123")
-# Output
-#   2
-# Input
-#   pattern_tracker("12a34")
-# Output
-#   2
-# Input
-#   pattern_tracker("987654321")
-# Output
-#   0
-# Input
-#   pattern_tracker("01234567")
-# Output
-#   7
-# Input
-#   pattern_tracker("abc")
-# Output
-#   0
-# Input
-#   pattern_tracker("1a2b3c4")
-# Output
-#   0
-# Input
-#   pattern_tracker("112233")
-# Output
-#   2
+# ----------
+# Write a function that counts the number of valid consecutive digit pairs
+# in a string. A valid pair consists of two adjacent digits where the second
+# digit is exactly one greater than the first.
+# A 9 followed by a 0 is not a valid pair.
+#
+# Signature:
+#   def pattern_tracker(text: str) -> int
+#
+# Examples:
+#   Input:  pattern_tracker("123")
+#   Output: 2
+#
+#   Input:  pattern_tracker("12a34")
+#   Output: 2
+#
+#   Input:  pattern_tracker("987654321")
+#   Output: 0
+
 
 def pattern_tracker(text: str) -> int:
     count = 0

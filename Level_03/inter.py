@@ -7,25 +7,26 @@
 #   By: czuluaga <czuluaga@student.42malaga.com>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/07/14 09:51:23 by czuluaga            #+#    #+#            #
-#   Updated: 2026/07/14 10:01:36 by czuluaga           ###   ########.fr      #
+#   Updated: 2026/07/15 12:02:36 by czuluaga           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
 # Assignment
-#   Write a function that returns a string with the characters that appear
-#   in both strings, without repetitions. Characters are added in the order
-#   they appear in the first string.
-# Function signature
-#   def inter(s1: str, s2: str) -> str:
-# Examples
-# Input
-#   inter("hello", "world")
-# Output
-#   "lo"
-# Input
-#   inter("banana", "band")
-# Output
-#   "ban"
+# ----------
+# Write a function that returns a string containing the characters that appear
+# in both strings, without repetitions.
+# Characters are added in the order they first appear in the first string.
+#
+# Signature:
+#   def inter(s1: str, s2: str) -> str
+#
+# Examples:
+#   Input:  inter("hello", "world")
+#   Output: "lo"
+#
+#   Input:  inter("banana", "band")
+#   Output: "ban"
+
 
 def inter(s1: str, s2: str) -> str:
     res: str = ""

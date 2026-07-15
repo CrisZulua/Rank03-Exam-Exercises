@@ -7,49 +7,30 @@
 #   By: czuluaga <czuluaga@student.42malaga.com>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/07/15 10:36:43 by czuluaga            #+#    #+#            #
-#   Updated: 2026/07/15 10:43:54 by czuluaga           ###   ########.fr      #
+#   Updated: 2026/07/15 12:02:45 by czuluaga           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
 # Assignment
-# Write a function that determines if two strings are permutations of each other.
-# Case sensitive. Whitespace and punctuation count as regular characters.
-# Empty strings are permutations of each other.
-# Function signature
-# def string_permutation_checker(s1: str, s2: str) -> bool:
-# Examples
-# Input
-# string_permutation_checker("abc", "bca")
-# Output
-# True
-# Input
-# string_permutation_checker("abc", "def")
-# Output
-# False
-# Input
-# string_permutation_checker("listen", "silent")
-# Output
-# True
-# Input
-# string_permutation_checker("hello", "bello")
-# Output
-# False
-# Input
-# string_permutation_checker("", "")
-# Output
-# True
-# Input
-# string_permutation_checker("a", "")
-# Output
-# False
-# Input
-# string_permutation_checker("Abc", "abc")
-# Output
-# False
-# Input
-# string_permutation_checker("a gentleman","elegant man")
-# Output
-# True
+# ----------
+# Write a function that determines whether two strings are permutations of
+# each other.
+# The comparison is case-sensitive. Whitespace and punctuation count as
+# regular characters. Empty strings are permutations of each other.
+#
+# Signature:
+#   def string_permutation_checker(s1: str, s2: str) -> bool
+#
+# Examples:
+#   Input:  string_permutation_checker("abc", "bca")
+#   Output: True
+#
+#   Input:  string_permutation_checker("listen", "silent")
+#   Output: True
+#
+#   Input:  string_permutation_checker("hello", "bello")
+#   Output: False
+
 
 def string_permutation_checker(s1: str, s2: str) -> bool:
     if s1 == "" and s2 == "":
